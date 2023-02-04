@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <typeAliases>
+        <!--通过设置package属性，来为该包下面的所有类指定为默认别名，即类名-->
+        <package name="com.lzw.entity"/>
+    </typeAliases>
+
+    <!--配置分页插件-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
+
+    <!--配置映射文件，当mapper接口与mapper映射文件的包不一致时需要设定，如果一致则不需要设定-->
+    <mappers>
+        <package name="com.lzw.mapper"/>
+    </mappers>
+</configuration>
